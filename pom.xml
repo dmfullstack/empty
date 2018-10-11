@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.cyan</groupId>
+	<artifactId>container</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>container</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk.version>1.8</jdk.version>
+		<junit.version>4.11</junit.version>
+		<project.basedir>/tmp/dev/empty</project.basedir>
+	</properties>
+
+<dependencies>
+<!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.12</version>
+    <scope>test</scope>
+</dependency>
+
+</dependencies>
+	<build>
+		<finalName>container</finalName>
+		<plugins>
+
+			<!-- download source code in Eclipse, best practice -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.9</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>false</downloadJavadocs>
+				</configuration>
+			</plugin>
+
+			<!-- Make this jar executable -->
+			<!-- <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					
+					<excludes>
+						<exclude>**/log4j.properties</exclude>
+					</excludes>
+					<archive>
+						<manifest>
+						
+							<mainClass>com.cyan.container.App</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<groupId>com.cyan</groupId>
+					<artifactId>container</artifactId>
+					<version>0.0.1-SNAPSHOT</version>
+					<packaging>jar</packaging>
+					<file>${basedir}/target/container.jar</file>
+					<generatePom>true</generatePom>
+				</configuration>
+				<executions>
+					<execution>
+						<id>install-jar-lib</id>
+						<goals>
+							<goal>install-file</goal>
+						</goals>
+						<phase>validate</phase>
+					</execution>
+				</executions>
+			</plugin> -->
+		</plugins>
+	</build>
+</project>
